@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contáctanos</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/contacto.css">
+    <link rel="stylesheet" href="../style/estilos.css">
+</head>
+<body>
+    <!-- Header principal -->
+    <header class="header-relojeria">
+        <div class="logo-nombre">
+            <img src="../image/pngtree-clock-symbol-png-format-png-image_13301424.png" alt="Logo Relojería Bradley" class="logo-relojeria">
+            <span class="nombre-relojeria">𝔅𝔯𝔞𝔡𝔩𝔢𝔶'𝔰ℜ𝔢𝔩𝔬𝔧</span>
+        </div>
+        <div class="buscador-header">
+            <input type="text" id="buscador" placeholder="Buscar reloj...">
+        </div>
+        <nav class="nav-header">
+            <a href="../index.html">Inicio</a>
+            <a href="damas.html">Damas</a>
+            <a href="smartwatch.html">Smartwatch</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="AcercaDe.html">Acerca de</a>
+        </nav>
+    </header>
+
+    <h1 class="contacto-titulo">CONTÁCTANOS</h1>
+    <div class="container-contacto">
+        <form class="formulario-contacto">
+            <h2>Escríbenos</h2>
+            <div class="form-group">
+                <label for="nombre">Nombre <span class="requerido">*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span class="requerido">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de teléfono <span class="requerido">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje <span class="requerido">*</span></label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">ENVIAR</button>
+        </form>
+        <div class="detalles-contacto">
+            <h2>Detalles de <strong>Contacto</strong></h2>
+            <div class="detalle">
+                <div class="detalle-icono">&#9742;</div>
+                <div class="detalle-info">
+                    4163-5899
+                </div>
+            </div>
+            <div class="detalle">
+                <div class="detalle-icono">&#9993;</div>
+                <div class="detalle-info">
+                    relojeriabradley@gmail.com
+                </div>
+            </div>
+            <div class="detalle">
+                <div class="detalle-icono">&#128205;</div>
+                <div class="detalle-info">
+                    Guatemala
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Buscador funcionalidad igual que en index
+    document.getElementById('buscador').addEventListener('keyup', function() {
+        var filtro = this.value.toLowerCase();
+        var tarjetas = document.querySelectorAll('.tarjeta-reloj');
+        tarjetas.forEach(function(tarjeta) {
+            var nombre = tarjeta.querySelector('h3').textContent.toLowerCase();
+            if (nombre.includes(filtro)) {
+                tarjeta.style.display = '';
+            } else {
+                tarjeta.style.display = 'none';
+            }
+        });
+
+        
+    });
+    
+    </script>
+
+        <!-- Mensaje de éxito para contacto -->
+    <style>
+    .mensaje-exito {
+        display: none;
+        margin: 0px auto 0 auto;
+        background: #e6ffe6;
+        color: #1a7a1a;
+        border: 1px solid #b2ffb2;
+        border-radius: 8px;
+        padding: 18px 0;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        max-width: 500px;
+    }
+    .btn-enviar:disabled {
+        background: #aaa;
+        cursor: not-allowed;
+    }
+    </style>
+    
+    <div class="mensaje-exito" id="mensaje-exito">
+        ¡Tu mensaje ha sido enviado exitosamente!<br>
+        Pronto nos pondremos en contacto contigo.
+    </div>
+    
+    <script>
+    // Buscador funcionalidad igual que en index
+    document.getElementById('buscador').addEventListener('keyup', function() {
+        var filtro = this.value.toLowerCase();
+        var tarjetas = document.querySelectorAll('.tarjeta-reloj');
+        tarjetas.forEach(function(tarjeta) {
+            var nombre = tarjeta.querySelector('h3').textContent.toLowerCase();
+            if (nombre.includes(filtro)) {
+                tarjeta.style.display = '';
+            } else {
+                tarjeta.style.display = 'none';
+            }
+        });
+    });
+    
+    // Mostrar mensaje de éxito al enviar el formulario de contacto
+    document.querySelector('.formulario-contacto').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('mensaje-exito').style.display = 'block';
+        document.querySelector('.btn-enviar').disabled = true;
+        document.querySelector('.btn-enviar').textContent = 'ENVIADO';
+    });
+    </script>
+    
+</body>
+</html>
+

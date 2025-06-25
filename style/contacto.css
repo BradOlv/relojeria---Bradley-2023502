@@ -1,0 +1,151 @@
+/* --- CONTACTO MODERNO --- */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.contacto-titulo {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.container-contacto {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    gap: 80px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.formulario-contacto {
+    flex: 2;
+    background: #fff;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.formulario-contacto h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 14px;
+    border: 1.5px solid #bbb;
+    border-radius: 4px;
+    font-size: 1.08em;
+    background: #fff;
+    margin-bottom: 0;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    background: #191d0e;
+    color: #fff;
+    border: none;
+    padding: 16px 48px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 0;
+    display: block;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+.btn-enviar:hover {
+    background: #333;
+}
+
+.requerido {
+    color: red;
+}
+
+.detalles-contacto {
+    flex: 1.2;
+    background: #fff;
+    padding: 0;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.detalles-contacto h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.detalles-contacto strong {
+    font-weight: 700;
+}
+
+.detalle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.detalle-icono {
+    width: 40px;
+    height: 40px;
+    background: #191d0e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-right: 18px;
+    font-size: 1.3em;
+}
+
+.detalle-info {
+    font-size: 1.08em;
+    color: #222;
+}
+
+@media (max-width: 900px) {
+    .container-contacto {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .detalles-contacto {
+        margin-top: 0;
+    }
+
+  .nav-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-header a:first-child {
+    margin-right: 400px;
+    font-weight: bold;
+
+    }
+}
